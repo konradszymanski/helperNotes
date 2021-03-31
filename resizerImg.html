@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <title>Image Resize JS</title>
+</head>
+<body>
+  <div class="container" style="text-align: center; margin-top: 5em;">
+    <!-- Image to be enlarged and onclick() function call-->
+    <img  class='accordionImages' src="https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-6.png" onclick="enlargeImg()"
+      id="img1" />
+    <br /><br /><br />
+    <img  class='accordionImages' src="https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-6.png" onclick="enlargeImg()"
+      id="img1" />
+    <br /><br /><br />
+    <img  class='accordionImages' src="https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-6.png" onclick="enlargeImg()"
+      id="img1" />
+    <br /><br /><br />
+  </div>
+  <style>
+    .accordionTabs {
+      transform: scale(2);
+      margin: 120px auto auto 245px;
+      overflow: scroll;
+      transform-origin: center;
+      width: auto;
+    }
+
+    .accordionTabs2 {
+      transform: scale(1);
+    }
+  </style>
+  <script>
+ // RESIZE THE MOBILE IMAGES OIN ACCORDION-DESCRIPTION
+    let imgAccordionSize = 1;
+    const accordionImages = document.getElementsByClassName('accordionImages')
+    function enlargeImg() {
+      imgAccordionSize++;
+      if (window.outerWidth <= 740) {
+        if ((imgAccordionSize % 2 === 0)) {
+          imgAccordionSize++;
+          Array.from(accordionImages).forEach(function(item){
+            item.classList.toggle('accordionTabs')
+          } )
+          }
+        } else if (window.outerWidth <= 740 && (imgAccordionSize % 2 != 0)) {
+          //accordionImages.classList.toggle('accordionTabs2')
+          Array.from(accordionImages).forEach(function(item){
+            item.classList.toggle('accordionTabs2')
+          } )
+        }
+      }
+  </script>
+</body>
+
+</html>
+<!-- 
+<script>
+  // RESIZE THE MOBILE IMAGES OIN ACCORDION-DESCRIPTION
+     let imgAccordionSize = 1;
+     function enlargeImg() {
+       imgAccordionSize++;
+       if (window.outerWidth <= 740) {
+         if ((imgAccordionSize % 2 === 0)) {
+           imgAccordionSize++;
+           document.getElementByClassName
+           document.getElementById("img1").classList.toggle('accordionTabs')
+         } else if (window.outerWidth <= 740 && (imgAccordionSize % 2 != 0)) {
+           document.getElementById("img1").classList.toggle('accordionTabs2')
+         }
+       }
+     }
+   </script> -->
