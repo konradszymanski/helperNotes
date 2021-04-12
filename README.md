@@ -17,14 +17,32 @@
 {% endif %}  
 
 
-
-var x = 0;\
-var element = document.getElementById("numbers");\
-element.innerHTML = x;\
-
-function addNumber(){\
-  element.innerHTML = ++x;\
-}\
-function subtrNumber(){\
-  element.innerHTML = x--;\
+////// SPECIFIC URL FOR CSS EDITING 
+  <script>
+    const accordionContent = document.querySelector('.shogun-accordion-wrapper');
+    const header1 = document.getElementsByTagName("h1")[1];
+    
+    function hideFAQ() {
+     accordionContent.style.display = "none";
+     header1.style.display = "none";
 }
+    function showFAQ() {
+  	accordionContent.style.display = "block";
+  	header1.style.display = "block" 
+}
+   window.onload = () => {
+  		myMutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+  var watchdog = new myMutationObserver(function (mutations, observer) {
+   
+    if (document.URL.includes("page=")) {
+      hideFAQ();
+    } else {
+      showFAQ();
+    }
+  });
+  watchdog.observe(document.getElementById("PageContainer"), {
+    subtree: true,
+    childList: true,
+  });
+};
+  </script>
