@@ -47,7 +47,7 @@
 };
   </script>
   
-  ////// SPECIFIC URL FOR CSS EDITING PART 2 with updates to typeerrors
+  ////// SPECIFIC URL FOR CSS EDITING PART 2 with updates to typeerrors \
      <script>
     const accordionContent = document.querySelector('.shogun-accordion-wrapper');
     const header1 = document.getElementsByTagName("h1")[1];
