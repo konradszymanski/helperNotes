@@ -46,3 +46,61 @@
   });
 };
   </script>
+  
+  ////// SPECIFIC URL FOR CSS EDITING PART 2 with updates to typeerrors
+     <script>
+    const accordionContent = document.querySelector('.shogun-accordion-wrapper');
+    const header1 = document.getElementsByTagName("h1")[1];
+    const shogunParagraph = document.querySelector('.shg-row')
+    
+    function hideFAQ() {
+	 shogunParagraph.style.display = "none";
+      
+      if (  accordionContent == null){
+         
+      } else {
+         accordionContent.style.display = "none";
+      }
+      
+      if (  header1 == null){
+            
+      } else {
+     	 header1.style.display = "none";
+      }
+ 
+   
+     console.log('hide')
+}
+    function showFAQ() {
+      if (  accordionContent == null){
+         
+      } else {
+         accordionContent.style.display = "block";
+      }
+      if (  accordionContent == null){
+         
+      } else {
+         header1.style.display = "block";
+      }
+//  	accordionContent.style.display = "block";
+//  	header1.style.display = "block";
+    shogunParagraph.style.display = "flex";
+      console.log('show')
+}
+   window.onload = () => {
+ 	myMutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+  	var watchdog = new myMutationObserver(function (mutations, observer) {
+   
+    if (document.URL.includes("page=")) {
+      hideFAQ();
+    } else {
+      showFAQ();
+    }
+  });
+  watchdog.observe(document.getElementById("PageContainer"), {
+    subtree: true,
+    childList: true,
+  });
+};
+  </script>
+  
