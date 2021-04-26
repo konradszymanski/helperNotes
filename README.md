@@ -104,3 +104,16 @@
 };
   </script>
   
+  ### change attributes to scripts example
+  ```
+  <!-- EDIT INSTA, NUMBER OF PHOTOS ON DIFFERENT SCREEN SIZE -- START -->
+  <script id='instaScript' src="https://showcase.abovemarket.com/embed/gallery/19994" data-gallery-id="19994" async></script>
+  <script>  
+    let valueInsta;
+    const instaScript = document.getElementById('instaScript')
+    if (window.innerWidth < 740 ){
+ 		instaScript.setAttribute('data-force-limit', 3)
+    } else {instaScript.setAttribute('data-force-limit', 5)}
+  </script>
+  ```
+ <!-- EDIT INSTA, NUMBER OF PHOTOS ON DIFFERENT SCREEN SIZE -- END -->  
