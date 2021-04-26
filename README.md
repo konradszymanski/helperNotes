@@ -1,13 +1,15 @@
 # helperNotes
 
-//ONLY FOR FIREFOX CSS\
+### css only for firefox
+```
 @-moz-document url-prefix() {  
  select.boost-pfs-filter-top-sorting-select {  
    text-indent: 5px!important;  
   }  
 }  
-  
-////// URL Liquid\
+``` 
+### style by URL in liquid
+```
 {% if request.path contains '/pages/reviews' %}  
     <style>  
       h1 {  
@@ -15,9 +17,9 @@
       }  
     </style>  
 {% endif %}  
-
-
-////// SPECIFIC URL FOR CSS EDITING 
+```
+### style css using JavaScript
+```
   <script>
     const accordionContent = document.querySelector('.shogun-accordion-wrapper');
     const header1 = document.getElementsByTagName("h1")[1];
@@ -103,7 +105,7 @@
   });
 };
   </script>
-  
+  ```
   ### change attributes to scripts example
   ```
   <!-- EDIT INSTA, NUMBER OF PHOTOS ON DIFFERENT SCREEN SIZE -- START -->
