@@ -113,9 +113,7 @@
   <script>  
     let valueInsta;
     const instaScript = document.getElementById('instaScript')
-    if (window.innerWidth < 740 ){
- 		instaScript.setAttribute('data-force-limit', 3)
-    } else {instaScript.setAttribute('data-force-limit', 5)}
+    window.innerWidth < 740 ? instaScript.setAttribute('data-force-limit', 3): instaScript.setAttribute('data-force-limit', 5)
   </script>
   ```
  <!-- EDIT INSTA, NUMBER OF PHOTOS ON DIFFERENT SCREEN SIZE -- END -->  
