@@ -157,3 +157,9 @@ export default function ColorPicker() {
   );
 }
 ```
+### line through not centered
+```
+.element{
+	background-image: linear-gradient(transparent 1.2ex, black 1.2ex, black 1.4ex, transparent 1.4ex);
+}
+```
