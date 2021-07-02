@@ -163,3 +163,12 @@ export default function ColorPicker() {
 	background-image: linear-gradient(transparent 1.2ex, black 1.2ex, black 1.4ex, transparent 1.4ex);
 }
 ```
+
+### add attribute to all anchors on the page
+```
+let links = document.getElementsByTagName('a');
+	for(let aa=0; aa<links.length; aa++) 
+          {
+             links[aa].setAttribute("rel", "noopener")
+          }
+```
