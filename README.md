@@ -172,3 +172,5 @@ let links = document.getElementsByTagName('a');
              links[aa].setAttribute("rel", "noopener")
           }
 ```
+### react cheat sheet
+https://dev.to/buddhadebchhetri/react-cheatsheets-5978
