@@ -174,3 +174,6 @@ let links = document.getElementsByTagName('a');
 ```
 ### react cheat sheet
 https://dev.to/buddhadebchhetri/react-cheatsheets-5978
+
+### take data attributes 
+https://stackoverflow.com/questions/7084557/select-all-elements-with-a-data-xxx-attribute-without-using-jquery
