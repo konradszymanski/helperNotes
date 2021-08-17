@@ -177,3 +177,25 @@ https://dev.to/buddhadebchhetri/react-cheatsheets-5978
 
 ### take data attributes 
 https://stackoverflow.com/questions/7084557/select-all-elements-with-a-data-xxx-attribute-without-using-jquery
+
+### change class using data attribute  / adam
+```
+  document.onreadystatechange = function () {
+     if (document.readyState == "complete") {
+     const gfOptionClass = [...document.querySelectorAll("[data-filter-id]")];
+       
+       let filterBtn = gfOptionClass.filter(x => x.hasAttribute('id'))
+       let filterSliders = gfOptionClass.filter(x => !x.hasAttribute('id'))
+       filterBtn.forEach(b => {
+        console.log(b);     	
+       b.addEventListener('click', () => {
+         filterSliders.forEach(f => f.classList.add('is-collapsed'))
+         const filterId = b.dataset.filterId
+         const sliderFtl = filterSliders.filter(f => f.dataset.filterId == filterId)[0]                     
+         sliderFtl.classList.remove('is-collapsed')
+         console.log(filterId, sliderFtl)
+        })
+      })   
+   }
+ }
+ ```
