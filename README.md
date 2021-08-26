@@ -199,3 +199,16 @@ https://stackoverflow.com/questions/7084557/select-all-elements-with-a-data-xxx-
    }
  }
  ```
+### override the Shopify reccomendation jQuery code. 
+Slick.js slider example
+```
+$(document).ready(function () {
+    var found = setInterval(function(){
+        if( $(".collection-slider").length ){
+            clearInterval(found);
+        }
+        // slick slider code
+        $(".collection-slider").slick()
+    }, 200);
+});
+```
